@@ -66,6 +66,7 @@ brew install homebrew/php/php55 --with-gmp
 #brew install hydra
 #brew install john
 #brew install knock
+brew install macvim
 brew install nmap
 #brew install pngcheck
 #brew install socat
@@ -107,8 +108,8 @@ brew install brew-cask
 brew cask install virtualbox vagrant
 
 # Set shell to zsh (to replace bash)
-brew install zsh
-chsh -s /bin/zsh
+#brew install zsh
+#chsh -s /bin/zsh
 
 # Remove outdated versions from the cellar.
 brew cleanup
