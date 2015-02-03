@@ -102,10 +102,17 @@ brew install node
 
 # Install cask, which is handy for installing other apps
 brew tap phinze/homebrew-cask
+brew tap caskroom/versions
 brew install brew-cask
 
-# Install Vagrant and VirtualBox
+# Install dev tools
 brew cask install virtualbox vagrant
+brew cask install sublime-text3
+brew cask install android-studio
+
+# Other utilities
+brew cask install iterm2
+brew cask install sourcetree
 
 # Set shell to zsh (to replace bash)
 #brew install zsh
