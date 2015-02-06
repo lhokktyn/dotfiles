@@ -120,3 +120,14 @@ brew cask install sourcetree
 
 # Remove outdated versions from the cellar.
 brew cleanup
+
+
+# Install XCode Solarized theme
+XCODE_THEME_DIR=~/Library/Developer/Xcode/UserData/FontAndColorThemes
+if [ ! -d "$XCODE_THEME_DIR" ]; then
+	mkdir $XCODE_THEME_DIR
+fi
+cp ./init/Solarized\ Dark.dvtcolortheme ~/Library/Developer/Xcode/UserData/FontAndColorThemes
+
+# Install cocoapods
+sudo gem install cocoapods
