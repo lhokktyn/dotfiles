@@ -17,7 +17,7 @@ sudo scutil --set LocalHostName "dadmac"
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "dadmac"
 
 # Disable the sound effects on boot
-#sudo nvram SystemAudioVolume=" "
+#sudo nvram SystemAudioVolume="%80"
 
 
 ###############################################################################
