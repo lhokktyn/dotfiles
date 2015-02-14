@@ -113,6 +113,7 @@ brew cask install android-studio
 # Other utilities
 brew cask install iterm2
 brew cask install sourcetree
+brew cask install caskroom/versions/firefoxdeveloperedition
 
 # Set shell to zsh (to replace bash)
 #brew install zsh
