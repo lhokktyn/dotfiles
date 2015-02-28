@@ -1,0 +1,12 @@
+# Work (kmd)
+Host github-work
+	HostName github.com
+	IdentityFile ~/.ssh/work_kmd_rsa
+
+Host bitbucket-work
+	HostName bitbucket.org
+	IdentityFile ~/.ssh/work_kmd_rsa
+
+# Defaults (personal)
+Host *
+	IdentityFile ~/.ssh/personal_rsa

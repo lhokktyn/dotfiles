@@ -130,5 +130,10 @@ if [ ! -d "$XCODE_THEME_DIR" ]; then
 fi
 cp ./init/Solarized\ Dark.dvtcolortheme ~/Library/Developer/Xcode/UserData/FontAndColorThemes
 
+
 # Install cocoapods
 sudo gem install cocoapods
+
+
+# Setup SSH config
+ln -fs ~/init/ssh/config ~/.ssh/config
