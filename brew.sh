@@ -24,6 +24,7 @@ brew install moreutils
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
 brew install findutils
 # Install GNU `sed`, overwriting the built-in `sed`.
+# This can actually cause some serious achy balls (e.g. https://github.com/CocoaPods/Specs/issues/12326)
 brew install gnu-sed --with-default-names
 # Install Bash 4.
 # Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before
@@ -106,9 +107,10 @@ brew tap caskroom/versions
 brew install brew-cask
 
 # Install dev tools
-brew cask install virtualbox vagrant
+brew cask install virtualbox vagrant boot2docker docker
 brew cask install sublime-text3
 brew cask install android-studio
+brew cask install robomongo
 
 # Other utilities
 brew cask install iterm2
@@ -137,3 +139,8 @@ sudo gem install cocoapods
 
 # Setup SSH config
 ln -fs ~/init/ssh/config ~/.ssh/config
+
+# Setup docker
+boot2docker init
+boot2docker start
+$(boot2docker shellinit)

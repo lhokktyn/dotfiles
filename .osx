@@ -17,7 +17,7 @@ sudo scutil --set LocalHostName "dadmac"
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "dadmac"
 
 # Disable the sound effects on boot
-#sudo nvram SystemAudioVolume="%80"
+sudo nvram SystemAudioVolume="%80"
 
 
 ###############################################################################
@@ -35,28 +35,6 @@ defaults write NSGlobalDomain KeyRepeat -int 0
 
 # Increase sound quality for Bluetooth headphones/headsets
 #defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
-
-# Install launch daemon to simply restart core audio services in order
-# to circumvent Yosemite's disabled audio bug
-echo '<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-    <key>Label</key>
-    <string>dadmac.launchd.audiofix</string>
-
-    <key>ProgramArguments</key>
-    <array>
-        <string>killall</string>
-        <string>coreaudiod</string>
-    </array>
-
-    <key>RunAtLoad</key>
-    <true/>
-</dict>
-</plist>' > /tmp/afix
-sudo mv /tmp/afix /Library/LaunchAgents/dadmac.launchd.audiofix
-sudo launchctl load -w /Library/LaunchAgents/dadmac.launchd.audiofix
 
 
 ###############################################################################
