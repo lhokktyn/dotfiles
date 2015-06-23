@@ -111,6 +111,7 @@ brew cask install virtualbox vagrant boot2docker docker
 brew cask install sublime-text3
 brew cask install android-studio
 brew cask install robomongo
+brew cask install java
 
 # Other utilities
 brew cask install iterm2
@@ -140,7 +141,14 @@ sudo gem install cocoapods
 # Setup SSH config
 ln -fs ~/init/ssh/config ~/.ssh/config
 
+# Setup git config
+git config --global core.editor "subl -n -w"
+
 # Setup docker
 boot2docker init
 boot2docker start
 $(boot2docker shellinit)
+
+# Install Ansible
+sudo easy_install pip
+sudo pip install ansible
