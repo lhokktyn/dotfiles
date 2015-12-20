@@ -110,7 +110,7 @@ brew tap caskroom/versions
 brew install brew-cask
 
 # Install dev tools
-brew cask install virtualbox vagrant docker-machine docker
+brew cask install virtualbox vagrant docker-machine docker docker-compose
 brew cask install sublime-text3
 brew cask install android-studio
 brew cask install robomongo
@@ -146,11 +146,6 @@ ln -fs ~/init/ssh/config ~/.ssh/config
 
 # Setup git config
 git config --global core.editor "subl -n -w"
-
-# Setup docker
-boot2docker init
-boot2docker start
-$(boot2docker shellinit)
 
 # Install Ansible
 sudo easy_install pip
